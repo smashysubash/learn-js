@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //variables are passed to function by value
+        function f1(a){
+            a=20;
+            console.log(a)
+        }
+        var a = 10;
+        f1(a);
+        console.log(a)
+
+        //object properties change can reflects outside the function
+        function f2(obj){
+            obj.a='world';
+        }
+        const obj={
+            a:'hello'
+        }
+        console.log(obj.a)
+        f2(obj)
+        console.log(obj)
+
+        //but the whole object cannot be changed
+        function f3(obj){
+            obj={
+                b:'qwe'
+            }
+        }
+        f3(obj)
+        console.log(obj)
+    </script>
+
+    <script>
+        // <!-- anonymous functions -->
+        const factorial = function fac(n) {
+          return n < 2 ? 1 : n * fac(n - 1);
+        };
+        
+        console.log(factorial(3)); // 6
+    </script>
+
+    <script>
+        //function hoisting
+
+        console.log(square(5)); // 25
+        function square(n) {
+        return n * n;
+        }
+
+
+        // //function hoisting not works on function expressions
+        // console.log(sqre(5)); // ReferenceError: Cannot access 'square' before initialization
+        // const sqre = function (n) {
+        // return n * n;
+        // };
+
+        function multiply(){
+            return a*a;
+        }
+        console.log(multiply())
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- var is function-scoped -->
+    <!-- <script>
+        var x = 10;
+        if(x===10){
+            var x=20;
+            console.log(x) //output 20
+        }
+        console.log(x)//output 20
+    </script>
+
+    <script>
+        function foo() {
+        var x = 1;
+        function bar() {
+            var y = 2;
+            console.log(x); // 1 
+            console.log(y); // 2 
+        }
+        bar();
+        console.log(x); // 1
+        console.log(y); // ReferenceError, `y` is scoped to `bar`
+        }
+
+        foo();
+
+    </script>
+
+    <script>
+        for (var a of [1, 2, 3]);
+        console.log(a); // 3
+    </script>
+
+    <script>
+        // Hoisting
+        bla = 2;
+        console.log(bla)
+        var bla;
+    </script> -->
+
+    <!-- let is block-scoped -->
+    <!-- <script>
+        let x = 1;
+        if (x === 1) {
+            let x = 2;
+            console.log(x);//2
+        }
+        console.log(x);//1
+        
+    </script> -->
+
+    <!-- <script>
+        function varTest() {
+        var x = 1;
+        {
+            var x = 2; // same variable!
+            console.log(x); // 2
+        }
+        console.log(x); // 2
+        }
+
+        function letTest() {
+        let x = 1;
+        {
+            let x = 2; // different variable
+            console.log(x); // 2
+        }
+        console.log(x); // 1
+        }
+
+    </script> -->
+
+    <script>
+        var a = 1;
+        var b = 2;
+
+        {
+            var a = 11; // the scope is global
+            let b = 22; // the scope is inside the block
+
+            console.log(a); // 11
+            console.log(b); // 22
+        }
+
+        console.log(a); // 11
+        console.log(b); // 2
+
+    </script>
+</body>
+</html>

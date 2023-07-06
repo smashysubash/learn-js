@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        a = 10;
+        console.log(a);//undefined
+        var a;
+
+
+        b=10;
+        console.log(b);//TDZ
+        let b;
+
+        console.log(c);//TDZ
+        const c = 20;
+    </script>
+
+    <!-- <script>
+        {
+            // TDZ starts at beginning of scope
+            const func = () => console.log(letVar); // OK
+            // Within the TDZ letVar access throws `ReferenceError`
+
+            let letVar = 3; // End of TDZ (for letVar)
+            func(); // Called outside TDZ!
+        }
+
+    </script> -->
+</body>
+</html>
