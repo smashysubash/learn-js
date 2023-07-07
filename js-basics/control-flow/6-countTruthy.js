@@ -1,5 +1,5 @@
 
-const array = [0, null, undefined, '', 2, 3];
+const array = [0, null, undefined,NaN, '', 2, 3];
 
 console.log(countTruthy(array));
 
